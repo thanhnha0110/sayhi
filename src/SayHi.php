@@ -4,8 +4,9 @@ namespace Nhanguyen\SayHi;
 
 class SayHi
 {
-    public function index()
+    public function talk($name = null)
     {
-        return "Hi " . rand(1, 1000);
+        $name = $name ?? 'Anonymous ' . rand(1, 1000);
+        return "Hi, " . $name;
     }
 }
